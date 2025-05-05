@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-// import TextTransition, { presets } from 'react-text-transition';
+import TextTransition, { presets } from 'react-text-transition';
 
 const TEXTS = ['Frontend Developer', 'Data Structure & Algo', 'Java Developer', 'YouTuber'];
 function Home() {
 
-  // const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(0);
 
-  // React.useEffect(() => {
-  //   const intervalId = setInterval(
-  //     () => setIndex((index) => index + 1),
-  //     3000, // every 3 seconds
-  //   );
-  //   return () => clearTimeout(intervalId);
-  // }, []);
+  React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000, // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
 
-  // const{theme} = useContext(ThemeContext)  
+  const{theme} = useContext(ThemeContext)  
   return (
     <>
       <div className="mt-14 w-screen h-screen flex flex-col md:flex-row justify-center items-center">
@@ -31,7 +31,7 @@ function Home() {
         <div className="ml-10">
             <h1 className="text-5xl font-extrabold"><span className="text-blue-600">Karan</span> Kumar</h1>
             <h3 className="flex  justify-center items-center font-bold text-blue-600 ">
-            {/* <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition> */}
+            <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </h3>
         </div>
       </div>
