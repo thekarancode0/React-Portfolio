@@ -17,7 +17,10 @@ const router = createBrowserRouter([
     {path:'/project',element:<Project/>}
 
   ]}
-])
+],
+{
+   basename: '/React-Portfolio'
+})
 function App(){
   const {theme} = useContext(ThemeContext)
   return(

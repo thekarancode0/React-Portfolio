@@ -106,7 +106,7 @@ function Navbar() {
         <button onClick={() => setTheme(!theme)}>
           <img
             className="w-7 transition-all duration-1000 ease-in-out"
-            src={theme ? "images/sun.png" : "images/moon.png"}
+            src={theme ? "/React-Portfolio/images/sun.png" : "/React-Portfolio/images/moon.png"}
             alt=""
           />
         </button>
